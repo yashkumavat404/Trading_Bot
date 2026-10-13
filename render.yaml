@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: trading-bot-worker
+    runtime: docker
+    dockerfilePath: ./Dockerfile.worker
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: BYBIT_DEMO_API_KEY
+        sync: false
+      - key: BYBIT_DEMO_API_SECRET
+        sync: false
+      - key: DASHBOARD_ORIGINS
+        sync: false
+      - key: BOT_SYMBOL
+        value: BTCUSDT
+      - key: BOT_TIMEFRAME
+        value: 5m
