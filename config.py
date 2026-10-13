@@ -16,7 +16,7 @@ class Settings:
     max_open_positions: int = 1
     # strategy
     ema_fast: int = 9
-    ema_slow: int = 15
+    ema_slow: int = 21
     rsi_period: int = 14
     rsi_long_min: float = 50.0
     rsi_short_max: float = 50.0
