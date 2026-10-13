@@ -1,0 +1,13 @@
+.env
+*.key
+*.pem
+credentials*
+.venv/
+__pycache__/
+.pytest_cache/
+logs/
+data/*.db
+data/*.db-*
+data/*.csv
+data/reports/
+*.log
