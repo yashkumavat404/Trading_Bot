@@ -19,7 +19,7 @@ Selected: **Bybit v5 demo trading** (REST host `https://api-demo.bybit.com`; pub
 **Not done:** official-doc review of cTrader Open API, MT5 brokers, Exness, Binance, OANDA, Kraken; no review of Freqtrade/Hummingbot/Jesse or video content. The choice rests on Bybit's documented demo API plus crypto perps supporting small sizes and high leverage; it is not a verified ranking. Regional eligibility for any real account is unchecked.
 
 ## Strategy
-EMA9/EMA15 cross + RSI14 (>50 long, <50 short) + ATR14 volatility band, on closed candles. Exits: SL 1.5×ATR, TP 2.25×ATR (both mandatory). Entry at bar close. Size = permitted risk / (stop distance + round-trip cost per unit), floored to lot step, capped by margin; never rounded up. Costs: taker fee, spread, slippage, funding (charged to both sides). If SL and TP both fall inside one bar, SL is assumed first; gaps fill at the open.
+EMA9/EMA21 cross + RSI14 (>50 long, <50 short) + ATR14 volatility band, on closed candles. Exits: SL 1.5×ATR, TP 2.25×ATR (both mandatory). Entry at bar close. Size = permitted risk / (stop distance + round-trip cost per unit), floored to lot step, capped by margin; never rounded up. Costs: taker fee, spread, slippage, funding (charged to both sides). If SL and TP both fall inside one bar, SL is assumed first; gaps fill at the open.
 
 ## Risk controls (all tested unless marked)
 - Daily loss counts unrealized P&L; hitting it flattens positions and blocks entries. New-trade size is cut to the remaining loss budget.
